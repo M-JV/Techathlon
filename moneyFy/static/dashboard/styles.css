@@ -10,7 +10,7 @@
 }
 
 body{
-   background-color: #E7E9E9;
+   background-color:whitesmoke;
 }
 
 .wrapper{
@@ -56,28 +56,6 @@ body{
 .wrapper .sidebar ul li:hover a{
   color: #ffffff;
 }
-
-.wrapper .sidebar .social_media{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.wrapper .sidebar .social_media a{
-  display: block;
-  width: 40px;
-  background: #594f8d;
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: #bdb8d7;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
 .wrapper .main_content{
   width: 100%;
   margin-left: 200px;
@@ -88,10 +66,6 @@ body{
   background: #fff;
   color: #717171;
   border-bottom: 1px solid #e0e4e8;
-}
-.three-columns {
-  display: grid;
-  grid-template-columns: repeat(3, auto); /* three columns (use auto-fit or auto-fill for responsive layouts) */
 }
 
 .upperbox{
@@ -110,13 +84,17 @@ body{
   padding: 25px;
   border-radius: 20px;
   margin: 15px;
+  box-shadow: 5px 5px #bdb8d7;
+
 }
+
+
 .AccountBox_info{
   width: 370px;
   border-radius: 10px;
   padding-left:100px ;
   margin-left: -10px;
-  height:120px;
+  height:130px;
   background-color: #27918e;
   align-self:center;
   color:#fff
