@@ -1,0 +1,151 @@
+<!--{% comment %} Transaction {% endcomment %}-->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'transactions/styles.css' %}" />
+    <title>Transaction Page</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .transaction-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .transaction {
+            display: flex;
+
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+
+        .transaction-description {
+            flex-grow: 1;
+        }
+
+        .transaction-amount {
+            font-weight: bold;
+        }
+
+        .add-transaction-form {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .add-transaction-input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .add-transaction-button {
+            background-color: #007bff;
+
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        canvas {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="Fintech.html"><i class="fas fa-user"></i>Transactions</a></li>
+                <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header">Hello Sebastian</div>
+        </div>
+    </div>
+    <div class="e9_1183">
+        <h1>Transaction Page</h1>
+        <div class="add-transaction-form">
+            <input class="add-transaction-input" type="text" id="new-transaction-description" placeholder="Description">
+            <input class="add-transaction-input" type="number" id="new-transaction-amount" placeholder="Amount">
+            <button class="add-transaction-button" onclick="addTransaction()">ADD</button>
+        </div>
+        <ul class="transaction-list">
+            <li class="transaction">
+                <span class="transaction-description">Salary</span>
+                <span class="transaction-amount">+$2,000.00</span>
+            </li>
+            <li class="transaction">
+                <span class="transaction-description">Rent</span>
+                <span class="transaction-amount">-$800.00</span>
+            </li>
+            <li class="transaction">
+                <span class="transaction-description">Groceries</span>
+                <span class="transaction-amount">-$150.00</span>
+            </li>
+            <!-- Add more transactions here -->
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const transactionData = {
+            labels: ["Income", "Expenses"],
+            datasets: [{
+                data: [2000, -950], // Update with your initial income and expenses
+                backgroundColor: ["#007bff", "#dc3545"]
+            }]
+        };
+
+
+
+        function addTransaction() {
+            const description = document.getElementById("new-transaction-description").value;
+            const amount = parseFloat(document.getElementById("new-transaction-amount").value);
+
+            if (description && !isNaN(amount)) {
+                // Update the transaction list
+                const transactionList = document.querySelector(".transaction-list");
+                const transactionItem = document.createElement("li");
+                transactionItem.className = "transaction";
+                transactionItem.innerHTML = `
+                    <span class="transaction-description">${description}</span>
+                    <span class="transaction-amount">${amount < 0 ? amount.toFixed(2) : "+" + amount.toFixed(2)}</span>
+                `;
+                transactionList.appendChild(transactionItem);
+
+
+
+
+
+                // Clear input fields
+                document.getElementById("new-transaction-description").value = "";
+                document.getElementById("new-transaction-amount").value = "";
+            }
+        }
+    </script>
+</body>
+</html>

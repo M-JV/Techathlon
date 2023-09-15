@@ -1,0 +1,55 @@
+<!--{% comment %} Dashboard {% endcomment %}-->
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}" />
+    <title>Expense tracker</title>
+  </head>
+  <body>
+    <!--Sidebar-->
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Transactions</a></li>
+                <li><a href="#"><i class="fas fa-address-card"></i>Contact</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header">Hello Sebastian</div>
+        </div>
+    </div>
+    <div class="upperbox">
+      <div class="AccountBox"><h4>Account</h4><br>
+        <div class="AccountBox_info">
+          <br><p class="pa">Account Type</p><br>
+          <p class="pa" style="font-size: larger;">Card</p>
+          <br><p class="pa">**** **** **** 2574</p>
+
+        </div>
+      </div>
+      <div class="MonthlyGoal"><h4>Monthly Goal</h4><br>
+      <div class="premonth">
+        <p class="pb">Last Month : 21200</p>
+      </div>
+      <div class="thismonth">
+        <p class="pb">This Month : 12850</p>
+      </div>
+      <div class="=goal">
+        <p class="pb">Goal : 20000</p>
+      </div>
+    </div>
+      <div class="UpcomingBills"><h4>Upcoming Bills</h4>
+      <div>
+
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
