@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-
-*{
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,16 +8,17 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-body{
-   background-color: #f3f5f9;
+body {
+  background-color: #f3f5f9;
 }
 
-.wrapper{
+/* Sidebar styles */
+.wrapper {
   display: flex;
   position: relative;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar {
   width: 200px;
   height: 100%;
   background: #432eaf;
@@ -26,120 +26,102 @@ body{
   position: fixed;
 }
 
-.wrapper .sidebar h2{
+.wrapper .sidebar h2 {
   color: #fff;
-
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul li {
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
   color: #ffffff;
   display: block;
 }
 
-.wrapper .sidebar ul li a .fas{
+.wrapper .sidebar ul li a .fas {
   width: 25px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar ul li:hover {
   background-color: #4e84d5;
 }
 
-.wrapper .sidebar ul li:hover a{
+.wrapper .sidebar ul li:hover a {
   color: #ffffff;
 }
 
-
-.wrapper .main_content{
+/* Main content styles */
+.wrapper .main_content {
   width: 100%;
-  margin-left: 100px;
+  margin-left: 200px;
 }
 
-.wrapper .main_content .header{
+.wrapper .main_content .header {
   padding: 20px;
   background: #fff;
   color: #717171;
   border-bottom: 1px solid #e0e4e8;
 }
-  .e9_1183 {
-    margin-top: 50px;
-    padding: 25px;
-    background-color: rgba(217, 217, 217, 1);
-    width: 580px;
-    height: fit-content;
-    border-top-left-radius: 28px;
-    border-top-right-radius: 28px;
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
-    position: absolute; /* Set the position to absolute */
-    top: 50px; /* Adjust the top position */
-    left: 220px; /* Adjust the left position */
+
+/* Transaction Page specific styles */
+.e9_1183 {
+  margin-top: 50px;
+  padding: 25px;
+  background-color: rgba(217, 217, 217, 1);
+  width: 580px;
+  height: fit-content;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  position: absolute;
+  top: 50px;
+  left: 220px;
 }
+
 .additional-box {
   margin-top: 50px;
   padding: 25px;
-  background-color: rgba(255, 0, 0, 0.7); /* Red background color with alpha transparency */
+  background-color: rgba(255, 0, 0, 0.7);
   width: 300px;
   height: fit-content;
   border-top-left-radius: 28px;
-    border-top-right-radius: 28px;
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
-  position: relative ;
-  float: right; /* Set the position to absolute */
-  top: auto; /* Adjust the top position */
-  left: auto; /* Adjust the left position */
+  border-top-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  position: relative;
+  float: right;
+  top: auto;
+  left: auto;
 }
 
-
-  .wrapper .main_content{
-    width: 100%;
-    margin-left: 200px;
-  }
-
-  .wrapper .main_content .header{
-    padding: 20px;
-    background: #fff;
-    color: #717171;
-    border-bottom: 1px solid #e0e4e8;
-  }
-
-  .wrapper .main_content .info{
-    margin: 20px;
-    color: #717171;
-    line-height: 25px;
-  }
-
-  .wrapper .main_content .info div{
-    margin-bottom: 20px;
-  }
-
+/* Additional styles for various elements in your HTML */
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
-.add-transaction-input{
+.add-transaction-input {
   margin-bottom: 10px;
 }
-.add-transaction-button{
+
+.add-transaction-button {
   margin-bottom: 10px;
 }
+
 canvas {
-    max-width: 200px;
-    max-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .container {
-  position: relative; /* Create a positioning context for the absolute element */
+  position: relative;
   width: 400px;
   height: 200px;
   background-color: #f0f0f0;
@@ -147,9 +129,120 @@ canvas {
 
 .absolute-box {
   position: absolute;
-  top: 20px; /* 20 pixels from the top edge of its containing block */
-  left: 50px; /* 50 pixels from the left edge of its containing block */
+  top: 20px;
+  left: 50px;
   width: 100px;
   height: 50px;
   background-color: #007bff;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
+  height: fit-content;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Styles for transaction-related elements */
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.transaction-description {
+  flex-grow: 1;
+}
+
+.transaction-amount {
+  font-weight: bold;
+}
+
+.add-transaction-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.add-transaction-input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.income-button, .expense-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.income-button {
+  background-color: #28a745;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+.total-balance {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.negative-balance {
+  color: red;
+}
+
+.transaction-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.transaction-inputs input {
+  margin-bottom: 10px;
+}
+
+.transaction-inputs .add-transaction-input {
+  margin-right: 0;
+}
+
+.income-expense-boxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.income-box, .expense-box {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+/* Rest of your CSS code from the HTML */

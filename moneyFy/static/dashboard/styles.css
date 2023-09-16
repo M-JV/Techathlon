@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-body{
-   background-color:#f3f5f9;
+body {
+  background-color: #f3f5f9;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   position: relative;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar {
   width: 200px;
   height: 100%;
   background: #432eaf;
@@ -26,58 +26,60 @@ body{
   position: fixed;
 }
 
-.wrapper .sidebar h2{
+.wrapper .sidebar h2 {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul li {
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
   color: #ffffff;
   display: block;
 }
 
-.wrapper .sidebar ul li a .fas{
+.wrapper .sidebar ul li a .fas {
   width: 25px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar ul li:hover {
   background-color: #4e84d5;
 }
 
-.wrapper .sidebar ul li:hover a{
+.wrapper .sidebar ul li:hover a {
   color: #ffffff;
 }
-.wrapper .main_content{
+.wrapper .main_content {
   width: 100%;
   margin-left: 100px;
 }
 
-.wrapper .main_content .header{
+.wrapper .main_content .header {
   padding: 20px;
   background: #fff;
   color: #717171;
   border-bottom: 1px solid #e0e4e8;
 }
 
-.upperbox{
+.upperbox {
   padding: 10px;
   margin-left: 200px;
   width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content:flex;
+  justify-content: flex;
 }
-.AccountBox, .MonthlyGoal, .UpcomingBills{
+.AccountBox,
+.MonthlyGoal,
+.UpcomingBills {
   width: 400px;
   height: 200px;
   background-color: #ffffff;
@@ -85,23 +87,38 @@ body{
   border-radius: 20px;
   margin: 15px;
   box-shadow: 5px 5px #bdb8d7;
-
 }
 
-
-.AccountBox_info{
+.AccountBox_info {
   width: 370px;
   border-radius: 10px;
-  padding-left:100px ;
+  padding-left: 100px;
   margin-left: -10px;
-  height:130px;
+  height: 130px;
   background-color: #27918e;
-  align-self:center;
-  color:#fff
+  align-self: center;
+  color: #fff;
 }
-.pa{
+.pa {
   margin-left: -90px;
 }
-.pb{
+.pb {
   line-height: 40px;
+}
+
+/* Add styles for the fourth container */
+.donut-container {
+  width: 400px;
+  height: 200px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 5px 5px #bdb8d7;
+}
+
+/* Style for the Donut Chart canvas */
+#donutChart {
+  width: 150px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
 }

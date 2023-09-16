@@ -10,26 +10,6 @@
     <title>Expense tracker</title>
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-
-        /* Add styles for the fourth container */
-        .donut-container {
-            width: 400px;
-  height: 200px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 15px;
-  box-shadow: 5px 5px #bdb8d7;
-
-        }
-
-        /* Style for the Donut Chart canvas */
-        #donutChart {
-            width: 150px; /* Set your desired width */
-            height: 150px; /* Set your desired height */
-        }
-    </style>
 </head>
 <body>
     <!--Sidebar-->
@@ -81,31 +61,6 @@
         </div>
     </div>
 
-    <script>
-        // Transaction data (replace with your actual data)
-        const transactionData = {
-            labels: ["Income", "Expenses"],
-            datasets: [{
-                data: [2000, -950], // Example values
-                backgroundColor: ["#007bff", "#dc3545"]
-            }]
-        };
-
-        // Function to create and update the Donut Chart
-        function updateDonutChart() {
-            const ctx = document.getElementById("donutChart").getContext("2d");
-            const donutChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: transactionData,
-                options: {
-                    responsive: false, // Disable responsiveness
-                    cutoutPercentage: 70
-                }
-            });
-        }
-
-        // Call the updateDonutChart function to create the initial chart
-        updateDonutChart();
-    </script>
+    <script src="{% static 'dashboard/dashboard.js' %}"></script>
 </body>
 </html>
